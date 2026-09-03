@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f4f0e8" />
+  <title>PRIMARS — monkey on mars</title>
+  <meta name="description" content="PRIMARS — a monkey, a phone, and Mars." />
+  <style>
+    :root{
+      --bg:#f4f0e8;
+      --ink:#11100e;
+      --muted:#6d675d;
+      --line:#cbc3b7;
+      --accent:#ff4b1f;
+      --card:#ece6dc;
+      --max:860px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      line-height:1.6;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none}
+    a:hover{text-decoration:underline;text-underline-offset:4px}
+    .wrap{width:min(calc(100% - 32px),var(--max));margin:0 auto}
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:22px 0;
+      border-bottom:1px solid var(--line);
+      font-size:14px;
+    }
+    .brand{font-weight:900;letter-spacing:-.04em}
+    nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+    main{padding:42px 0 70px}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 260px;
+      gap:42px;
+      align-items:center;
+      padding:22px 0 46px;
+    }
+    .eyebrow{font-size:13px;color:var(--muted);margin-bottom:12px}
+    h1{
+      margin:0;
+      font-size:clamp(48px,10vw,104px);
+      line-height:.88;
+      letter-spacing:-.08em;
+      text-transform:lowercase;
+    }
+    .tagline{
+      margin:22px 0 0;
+      max-width:590px;
+      font-size:clamp(19px,3vw,28px);
+      line-height:1.35;
+      letter-spacing:-.035em;
+    }
+    .hero img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;display:block}
+    .meta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
+    .pill{
+      border:1px solid var(--ink);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      background:transparent;
+    }
+    .pill.cta{background:var(--ink);color:var(--bg);cursor:pointer}
+    article{font-size:18px;letter-spacing:-.02em}
+    article p{margin:0 0 26px}
+    article .short{max-width:670px}
+    .bigline{
+      font-size:clamp(29px,5vw,52px);
+      line-height:1.05;
+      letter-spacing:-.055em;
+      margin:64px 0 34px;
+      font-weight:900;
+    }
+    .accent{color:var(--accent)}
+    .meme{
+      margin:48px 0;
+      border:1px solid var(--line);
+      background:var(--card);
+      padding:10px;
+    }
+    .meme img{width:100%;display:block;filter:saturate(.9)}
+    .contract{
+      margin-top:42px;
+      padding:18px;
+      border:1px solid var(--ink);
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:14px;
+      align-items:center;
+    }
+    .contract small{display:block;color:var(--muted);margin-bottom:4px}
+    .addr{word-break:break-all;font-size:14px}
+    button{
+      font:inherit;
+      border:1px solid var(--ink);
+      color:var(--bg);
+      background:var(--ink);
+      padding:10px 14px;
+      cursor:pointer;
+    }
+    footer{
+      border-top:1px solid var(--line);
+      padding:22px 0 36px;
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);white-space:nowrap;margin:12px 0 48px}
+    .ticker span{display:inline-block;padding:12px 0;animation:slide 18s linear infinite}
+    @keyframes slide{to{transform:translateX(-50%)}}
+    @media(max-width:720px){
+      .hero{grid-template-columns:1fr;gap:28px}
+      .hero img{width:min(72vw,280px)}
+      header{align-items:flex-start}
+      .contract{grid-template-columns:1fr}
+      h1{font-size:clamp(58px,18vw,92px)}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">primars.txt</a>
+      <nav>
+        <a href="#story">story</a>
+        <a href="#meme">meme</a>
+        <a href="https://x.com/" target="_blank" rel="noreferrer">@primars</a>
+        <a href="#contract">CTPo...pump</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <div class="eyebrow">mars log / sol 001</div>
+          <h1>primars</h1>
+          <p class="tagline">a monkey. on mars. still checking the phone.</p>
+          <div class="meta">
+            <span class="pill">monkey</span>
+            <span class="pill">phone</span>
+            <span class="pill">mars</span>
+            <a class="pill cta" href="#story">read the transmission ↓</a>
+          </div>
+        </div>
+        <img src="assets/primars-monkey.png" alt="PRIMARS monkey using a phone" />
+      </section>
+
+      <div class="ticker" aria-hidden="true"><span>PRIMARS&nbsp;&nbsp;•&nbsp;&nbsp;NO TERMINAL&nbsp;&nbsp;•&nbsp;&nbsp;NO EARTH&nbsp;&nbsp;•&nbsp;&nbsp;JUST PHONE&nbsp;&nbsp;•&nbsp;&nbsp;PRIMARS&nbsp;&nbsp;•&nbsp;&nbsp;NO TERMINAL&nbsp;&nbsp;•&nbsp;&nbsp;NO EARTH&nbsp;&nbsp;•&nbsp;&nbsp;JUST PHONE&nbsp;&nbsp;•&nbsp;&nbsp;</span></div>
+
+      <article id="story">
+        <p class="short">earth sent probes.</p>
+        <p class="short">then rovers.</p>
+        <p class="short">then somebody made the obvious mistake:</p>
+        <p class="bigline">they sent an ape with a <span class="accent">phone.</span></p>
+
+        <p class="short">the plan was to build the first colony on mars.</p>
+        <p class="short">the ape had other plans.</p>
+        <p class="short">he found a signal.</p>
+        <p class="short">he opened the chart.</p>
+        <p class="short">he never looked up again.</p>
+
+        <p class="bigline">humanity reached mars.<br>the ape reached <span class="accent">the buy button.</span></p>
+
+        <p class="short">no mission control. no complicated thesis. no twelve monitors.</p>
+        <p class="short">just one monkey, one phone, one red planet, and questionable financial decisions.</p>
+
+        <div class="meme" id="meme">
+          <img src="assets/primars-meme.png" alt="PRIMARS Schrödinger meme" />
+        </div>
+
+        <p class="bigline">welcome to the colony.</p>
+        <p class="short">population: whoever is still holding.</p>
+
+        <section class="contract" id="contract">
+          <div>
+            <small>contract address</small>
+            <div class="addr" id="ca">PASTE_YOUR_CONTRACT_ADDRESS_HERE</div>
+          </div>
+          <button type="button" onclick="copyCA()">copy</button>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <span>primars / 2 min read / transmitted from mars</span>
+      <span>not financial advice. obviously.</span>
+    </footer>
+  </div>
+
+  <script>
+    function copyCA(){
+      const value=document.getElementById('ca').textContent.trim();
+      navigator.clipboard.writeText(value).then(()=>{
+        const btn=document.querySelector('#contract button');
+        const old=btn.textContent;
+        btn.textContent='copied';
+        setTimeout(()=>btn.textContent=old,1200);
+      });
+    }
+  </script>
+</body>
+</html>
